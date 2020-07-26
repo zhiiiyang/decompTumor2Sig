@@ -26,7 +26,7 @@
 is.probability.vector <- function(x) {
     if (is.vector(x) & is.numeric(x)) {
         return(isTRUE(all.equal.numeric(sum(x, na.rm=TRUE),
-                                        tolerance=1e-5, 1)) &
+                                        tolerance=1e-4, 1)) &
                    all(x>=0 & x<=1, na.rm=TRUE))
     }
 
